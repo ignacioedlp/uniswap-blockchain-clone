@@ -15,5 +15,5 @@
 
 - Sanity
 
-![uniswap.png]("./uniswap.png")
+![uniswap]("./uniswap.png")
 
