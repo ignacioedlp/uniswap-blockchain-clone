@@ -22,7 +22,7 @@ const style = {
   headerLogo: `flex w-1/4 items-center justify-start`,
   nav: `flex-1 flex justify-center items-center`,
   navItemsContainer: `flex bg-[#191B1F] rounded-3xl`,
-  navItem: `px-4 py-1 m-1 flex items-center text-lg font-semibold text-[0.9rem] cursor-pointer rounded-3xl`,
+  navItem: `px-1 py-1 m-1 flex items-center text-lg font-semibold text-[0.9rem] cursor-pointer rounded-3xl`,
   activeNavItem: `bg-[#20242A]`,
   buttonsContainer: `flex w-1/4 justify-end items-center`,
   button: `flex items-center bg-[#191B1F] rounded-2xl mx-2 text-[0.9rem] font-semibold cursor-pointer`,
@@ -39,8 +39,7 @@ function Header() {
 
   useEffect(() => {
     if (!currentAccount) return
-    setUserName(`${currentAccount.slice(0, 7)}...${currentAccount.slice(35)}`)
-
+    setUserName(`${currentAccount.slice(0, 7)}...${currentAccount.slice(45)}`)
   }, [currentAccount])
 
   return (
@@ -96,7 +95,9 @@ function Header() {
         </div>
       </div>
       <div className={style.buttonsContainer}>
-        <div className={`${style.button} ${style.buttonPadding}`}>
+        <div
+          className={`${style.button} ${style.buttonPadding} hidden md:flex`}
+        >
           <div className={style.buttonIconContainer}>
             <Image src={ethLogo} width={20} height={20} />
           </div>
@@ -122,7 +123,9 @@ function Header() {
             </div>
           </div>
         )}
-        <div className={`${style.button} ${style.buttonPadding}`}>
+        <div
+          className={`${style.button} ${style.buttonPadding} hidden md:flex`}
+        >
           <div className={`${style.buttonIconContainer} mx-2`}>
             <HiOutlineDotsVertical />
           </div>
