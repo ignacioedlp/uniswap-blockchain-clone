@@ -20,6 +20,6 @@ export default function Home() {
         <Main />
         <TransactionHistory/>
       </main>
-    <div>
+    </div>
   )
 }
