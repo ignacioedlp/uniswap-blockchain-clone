@@ -9,11 +9,17 @@ const style = {
 
 export default function Home() {
   return (
-    <div className={style.wrapper}>
-      <Adver/>
-      <Header/>
-      <Main />
-      <TransactionHistory/>
-    </div>
+    <div>
+      <Head>
+        <title>Uniswap clone</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className={style.wrapper}>
+        <Adver/>
+        <Header/>
+        <Main />
+        <TransactionHistory/>
+      </main>
+    <div>
   )
 }
